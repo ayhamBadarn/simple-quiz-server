@@ -1,5 +1,5 @@
 const express = require('express');
-const morgan = require('morgan')
+//const morgan = require('morgan')
 const cors = require('cors')
 const cookieParser = require('cookie-parser')
 const AppError = require('./utils/appError');
@@ -11,7 +11,7 @@ const userRoute = require('./routes/userRoute')
 const app = express();
 
 // Middleware
-if (process.env.NODE_ENV === 'development') app.use(morgan('dev'));
+//if (process.env.NODE_ENV === 'development') app.use(morgan('dev'));
 app.use(cors({
   origin: process.env.ORIGIN,
   credentials: true,
